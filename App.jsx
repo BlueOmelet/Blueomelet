@@ -3,9 +3,9 @@ import './App.css'
 
 function App() {
   const images = [
-    '/src/assets/foto1.png',
-    '/src/assets/foto2.jpg',
-    '/src/assets/foto3.jpg'
+    'foto1.png',
+    'foto2.jpg',
+    'foto3.jpg'
   ]
 
   const [current, setCurrent] = useState(0)
@@ -44,7 +44,7 @@ function App() {
         <ul className="nav">
           <li>Inicio</li>
           <li>Sobre nosotros</li>
-          <img src="/src/assets/logo.png" alt="Logo" />
+          <img src="logo.png" alt="Logo" />
           <li>Lanzamientos</li>
           <li>Contacto</li>
         </ul>
@@ -56,13 +56,13 @@ function App() {
         {/* MERCH */}
         <div className="merch">
           <div className="product">
-            <img src="/src/assets/camiseta.png" alt="Camiseta Blue Omelet" />
+            <img src="camiseta.png" alt="Camiseta Blue Omelet" />
             <p>Camiseta básica Blue Omelet</p>
             <span>10.99€</span>
             <button>Comprar</button>
           </div>
           <div className="product">
-            <img src="/src/assets/camiseta.png" alt="Camiseta Blue Omelet" />
+            <img src="camiseta.png" alt="Camiseta Blue Omelet" />
             <p>Camiseta básica Blue Omelet</p>
             <span>10.99€</span>
             <button>Comprar</button>
