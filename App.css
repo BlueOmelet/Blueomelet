@@ -1,0 +1,201 @@
+/* FONDO GENERAL */
+body {
+  background-color: black;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+/* HEADER */
+header {
+  width: 100%;
+  max-width: 1536px;
+  height: 770px;
+  background-image: url('/src/assets/header.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* NAV */
+ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+  position: relative;
+}
+
+ul img {
+  width: 100px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+ul li {
+  margin-left: 20px;
+}
+
+/* TITULO PRINCIPAL */
+main h2 {
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  margin: 40px 0 60px 0;
+}
+
+/* MERCH */
+.merch {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.merch .product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+}
+
+.merch .product img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.merch .product p {
+  color: white;
+  font-size: 20px;
+  margin: 10px 0 5px 0;
+}
+
+.merch .product span {
+  color: #007BCA;
+  font-size: 18px;
+}
+
+.merch .product button {
+  background-color: #007BCA;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 130px;
+  color: white;
+}
+
+/* CONCIERTOS */
+.conciertos {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.info,
+.concierto {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 12px 0;
+}
+
+.info {
+  font-weight: bold;
+  border-bottom: 2px solid #555;
+  color: #007BCA;
+}
+
+.concierto {
+  border-bottom: 1px solid #333;
+}
+
+.info div,
+.concierto div {
+  padding: 8px 0;
+  text-align: center;
+}
+
+.noconciertos {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* MEDIA QUERIES */
+
+/* TABLETS */
+@media (max-width: 1024px) {
+  .merch .product {
+    width: 45%;
+  }
+
+  header {
+    height: 500px;
+  }
+
+  main h2 {
+    font-size: 26px;
+  }
+
+  .info,
+  .concierto {
+    max-width: 90%;
+  }
+}
+
+/* MOVILES */
+@media (max-width: 768px) {
+  .merch .product {
+    width: 100%;
+  }
+
+  main h2 {
+    font-size: 22px;
+    margin: 20px 0 40px 0;
+  }
+
+  .info,
+  .concierto {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  ul {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+/* PEQUEÑOS MOVILES */
+@media (max-width: 480px) {
+  .info,
+  .concierto {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    height: 400px;
+  }
+
+  main h2 {
+    font-size: 20px;
+  }
+
+  .merch .product img {
+    height: 200px;
+  }
+
+  .merch .product button {
+    width: 100px;
+  }
+}

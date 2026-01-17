@@ -1,0 +1,175 @@
+:root {
+ font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #213547; /* color texto por defecto */
+  background-color: #ffffff; /* fondo claro */
+}
+
+/* RESET BÁSICO */
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* HEADER */
+header {
+  padding: 20px;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 330px;
+    list-style: none;
+    position: relative;
+    right: 30px;
+    color: white;
+}
+
+.nav img {
+    height: max-content;
+    width: 100px;
+    position: absolute;
+}
+
+/* MERCH */
+.merch {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.product {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.product img {
+  width: 150px;
+}
+
+
+/* GALERÍA */
+.galeria {
+  width: 100%;
+  max-width: 900px;
+  margin: 50px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+
+
+.slider {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.slider img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+/* FLECHAS */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
+/* DOTS */
+.dots {
+  position: absolute;
+  bottom: 12px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  margin: 0 6px;
+  background: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: white;
+}
+
+/* LIGHT MODE */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+}
+
+
+main h2{
+      font-size: 30px;
+    color: white;
+    width: 500px;
+    position: relative;
+    left: 380px;
+    top: 30px;
+    margin-bottom: 60px;
+}
+
+
+.conciertos .info ul{
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 288px;
+    list-style: none;
+    left: -5px;
+    position: relative;
+    background: blue;
+    width: 1140px;
+    height: 10px;
+}
+
+
+.concierto div{
+    color: white;
+    text-align: center;
+    display: inline-block;
+    margin-left: 20px;
+}
