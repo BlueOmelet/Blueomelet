@@ -1,13 +1,275 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>blueomelet</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="App.jsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blueomelet</title>
+  <link rel="shortcut icon" href="assets/logofavicon.png" type="image/x-icon">
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background-color: black;
+      color: white;
+    }
+
+    header {
+         display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-image: url(/assets/backgrounheader.png);
+    height: 930px;
+    background-size: cover;
+    }
+
+    header img {
+          width: 170px;
+    position: absolute;
+    left: 860px;
+    top: 20px;
+    }
+
+    header ul {
+           display: flex;
+    list-style: none;
+    gap: 380px;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 70px;
+    left: 230px;
+    }
+
+    header li {
+      cursor: pointer;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 40px;
+    }
+
+    /* MERCH */
+    .merch {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-bottom: 60px;
+    }
+
+    .product {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      width: 200px;
+    }
+
+    .product img {
+      width: 150px;
+    }
+
+    .product button {
+          margin-top: 20px;
+    padding: 8px 16px;
+    background-color: #007BCA;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    position: relative;
+    left: 60px;
+    }
+
+    /* GALERÍA */
+    .galeria {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto 60px auto;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    .slider {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slider img {
+      width: 100%;
+      flex-shrink: 0;
+      object-fit: cover;
+    }
+
+    .dots {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      background: #bbb;
+      border-radius: 50%;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+
+    .dot.active {
+      background: white;
+    }
+
+    /* CONCIERTOS */
+    .conciertos {
+      max-width: 800px;
+      margin: 0 auto 60px auto;
+      text-align: center;
+    }
+
+    .info, .concierto {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      padding: 10px 0;
+      border-bottom: 1px solid #555;
+    }
+
+    .info {
+      font-weight: bold;
+      color: #007BCA;
+    }
+
+    .noconciertos {
+      margin-top: 20px;
+      font-size: 20px;
+      color: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .merch {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .info, .concierto {
+        grid-template-columns: repeat(2, 1fr);
+        text-align: center;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <img src="assets/logo.png" alt="Logo">
+    <ul>
+      <li>Inicio</li>
+      <li>Sobre nosotros</li>
+      <li>Lanzamientos</li>
+      <li>Contacto</li>
+    </ul>
+  </header>
+
+  <main>
+    <h2>OBTÉN NUESTRA CAMISETA PARA ANIMARNOS EN LOS CONCIERTOS</h2>
+
+    <!-- MERCH -->
+    <div class="merch">
+      <div class="product">
+        <img src="assets/Rectangle 9.png" alt="Camiseta 1">
+        <p>Camiseta básica Blue Omelet</p>
+        <span>10.99€</span>
+        <button style="display: block;">Comprar</button>
+      </div>
+      <div class="product">
+        <img src="assets/Blue omelet camiseta 2.jpeg" alt="Camiseta 2">
+        <p>Camiseta básica Blue Omelet</p>
+        <span>10.99€</span>
+        <button style="display: block;">Comprar</button>
+      </div>
+    </div>
+
+    <!-- GALERÍA -->
+    <div class="galeria">
+      <div class="slider">
+        <img src="assets/foto1.png" alt="Foto 1">
+        <img src="assets/foto2.jpg" alt="Foto 2">
+        <img src="assets/foto3.jpg" alt="Foto 3">
+      </div>
+      <div class="dots">
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+
+    <h2>Proximos conciertos</h2>
+
+    <!-- CONCIERTOS -->
+    <div class="conciertos">
+      <div class="info">
+        <div>Fecha</div>
+        <div>Lugar</div>
+        <div>Ciudad</div>
+        <div>Hora</div>
+      </div>
+      <div class="concierto">
+        <div>15 de Febrero</div>
+        <div>Sala Rockera</div>
+        <div>Madrid</div>
+        <div>21:00</div>
+      </div>
+      <div class="concierto">
+        <div>30 de Febrero</div>
+        <div>Sala Apolo</div>
+        <div>Barcelona</div>
+        <div>23:00</div>
+      </div>
+      <div class="noconciertos" style="display:none;">No hay conciertos programados</div>
+    </div>
+
+  </main>
+
+  <script>
+    // Slider automático
+    const slider = document.querySelector('.slider');
+    const slides = document.querySelectorAll('.slider img');
+    const dots = document.querySelectorAll('.dot');
+    let current = 0;
+
+    function showSlide(index) {
+      slider.style.transform = `translateX(-${index * 100}%)`;
+      dots.forEach(dot => dot.classList.remove('active'));
+      dots[index].classList.add('active');
+    }
+
+    function nextSlide() {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }
+
+    let interval = setInterval(nextSlide, 3000);
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        current = i;
+        showSlide(current);
+      });
+    });
+
+    slider.addEventListener('mouseenter', () => clearInterval(interval));
+    slider.addEventListener('mouseleave', () => interval = setInterval(nextSlide, 3000));
+  </script>
+</body>
 </html>
