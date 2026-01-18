@@ -48,7 +48,7 @@
     }
 
     header h2{
-            position: absolute;
+             position: relative;
     width: 100%;
     text-align: center;
     font-size: 70px;
@@ -119,16 +119,15 @@
       }
 
       header ul {
-    flex-direction: column;
+        flex-direction: column;
     gap: 0px;
     position: static;
     margin-top: 20px;
-    left: 70px;
     position: relative;
     text-align: center;
     top: -10px;
     font-size: 15px;
-    left: 90px;
+    left: -60px;
       }
 
       header{
@@ -140,11 +139,33 @@
             width: 90px;
     position: absolute;
     left: 0px; }
+
+    header h2{
+                font-size: 20px;
+    top: 160px;
+    left: 10px;
+    width: 100%;
+    }
+
+    main iframe{
+        width: 100%;
+    border-radius: 12px;
+    width: 280px;
+    /* margin: 50px; */
+    /* height: 96px; */
+    position: absolute;
+    left: 9px;
+    top: 380px;
+    }
+    }
+
+    main iframe{
+      width: 50%;
     }
 
 
 </style>
-<body>
+<body style="height: 1300px;">
     <header>
      <a href="index.html">
       <img src="assets/logo.png" alt="Logo">
@@ -158,13 +179,17 @@
       <li>Contacto</li>
     </ul>
 
-    <h2>Lanzamientos</h2>
+    <h2>Music</h2>
   </header>
 
   <main style="text-align: center; padding-top: 100px;">
     <!-- Contenido de la página de lanzamientos -->
-
-     <iframe data-testid="embed-iframe" style="border-radius:12px; width: 400px; margin: 50px;" src="https://open.spotify.com/embed/track/61TX7d2Sp40mB6T3jwPnd4?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <img style="
+    width: 230px;
+    border-radius: 10px;
+    margin-right: 30px;
+" src="assets/lomismodesiempreportada.jpg" alt="">
+     <iframe data-testid="embed-iframe" src="https://open.spotify.com/embed/track/61TX7d2Sp40mB6T3jwPnd4?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
   </main>
 </body>
 </html>

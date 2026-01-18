@@ -225,13 +225,15 @@
 
   </style>
 </head>
-<body>
+<body style="overflow-x: hidden;">
   <header>
     <a href="index.html">
       <img src="assets/logo.png" alt="Logo">
     </a>
     <ul>
-      <li>Inicio</li>
+      <a href="#conciertos" style="color: white; text-decoration: none; transition: 1s;">
+        <li>Inicio</li>
+      </a>
       <li>Sobre nosotros</li>
       <a style="color: white; text-decoration: none;" href="lanzamientos.html">
         <li>Lanzamientos</li>
@@ -276,7 +278,7 @@
     <h2>Proximos conciertos</h2>
 
     <!-- CONCIERTOS -->
-    <div class="conciertos">
+    <div class="conciertos" id="conciertos">
       <div class="info">
         <div>Fecha</div>
         <div>Lugar</div>
@@ -318,7 +320,7 @@
       showSlide(current);
     }
 
-    let interval = setInterval(nextSlide, 3000);
+    let interval = setInterval(nextSlide, 2500);
 
     dots.forEach((dot, i) => {
       dot.addEventListener('click', () => {
