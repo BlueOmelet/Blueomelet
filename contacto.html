@@ -179,15 +179,20 @@
     <div style="text-align: center; margin-top: 100px;">
       <h3>Contáctanos</h3>
       <p>Si tienes alguna pregunta o deseas más información, no dudes en contactarnos a través del siguiente formulario:</p>
-      <form style="display: inline-block; text-align: left; margin-top: 20px;">
-        <label for="name">Nombre:</label><br>
-        <input type="text" id="name" name="name" required><br><br>
-        <label for="email">Correo Electrónico:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
-        <label for="message">Mensaje:</label><br>
-        <textarea id="message" name="message" rows="4" required></textarea><br><br>
-        <input type="submit" value="Enviar">
-      </form>
+      <form style="
+    width: 510px;
+    line-height: 70px;
+    /* width: 10%; */
+    /* text-align: center; */
+    position: relative;
+    left: 700px;
+" action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="c52e8377-9f6e-494b-aeeb-cb3572cb3fb1">
+  <input type="text" name="name" required>
+  <input type="email" name="email" required>
+  <textarea name="message" required></textarea>
+  <button type="submit">Submit</button>
+</form>
     </div>
   </main>
 </body>
