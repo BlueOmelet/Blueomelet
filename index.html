@@ -43,6 +43,8 @@
 
     header li {
       cursor: pointer;
+      position: static;
+      padding: 10px;
     }
 
     main {
@@ -162,8 +164,8 @@
       }
 
       header ul {
-        gap: 300px;
-        left: 140px;
+           gap: 300px;
+    left: 90px;
       }
 
       header{
@@ -221,6 +223,16 @@
         left: 70px;
     }
     }
+
+    header ul li:hover{
+      background-color: #007BCA;
+      color: white;
+    padding: 10px;
+    position: static;
+    border-radius: 10px;
+    transition: 0.5s;
+    }
+    
 
 
   </style>
@@ -299,8 +311,11 @@
       </div>
       <div class="noconciertos" style="display:none;">No hay conciertos programados</div>
     </div>
-
   </main>
+
+  <footer>
+    <p style="text-align: center; padding: 20px; background-color: black;">&copy; 2026 Blueomelet. Todos los derechos reservados.</p>
+  </footer>
 
   <script>
     // Slider automático
